@@ -421,7 +421,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         </div>
                         <div className="mt-2.5">
                             Website source code on&nbsp;
-                            <a href="https://github.com/f3rm/f3rm-website" target="_blank" className="text-blue-500">
+                            <a href="https://github.com/f3rm/f3rm.github.io" target="_blank" className="text-blue-500">
                             <span
                                 className="align-text-top inline-flex justify-center mr-0.25"><AiFillGithub/>&nbsp;</span>
                                 <span>GitHub</span>
