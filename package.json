@@ -1,0 +1,53 @@
+{
+  "name": "feature-fields-manipulation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "feature-fields-manipulation",
+  "author": "Ge Yang <ge.ike.yang@gmail.com>, William Shen <willshen@mit.edu>",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "deploy-ssh": "rm -r public & yarn run build && gh-pages -d public -b gh-pages -r git@github.com:f3rm/f3rm.github.io.git",
+    "deploy": "rm -r public & yarn run build && gh-pages -d public -b gh-pages -r https://github.com/f3rm/f3rm.github.io.git",
+    "staging": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.3.0",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "flowbite": "^1.7.0",
+    "flowbite-react": "^0.4.7",
+    "flowbite-typography": "^1.0.3",
+    "gatsby": "^5.10.0",
+    "gatsby-plugin-google-gtag": "^5.10.0",
+    "gatsby-plugin-manifest": "^5.10.0",
+    "gatsby-plugin-mdx": "^5.10.0",
+    "gatsby-plugin-postcss": "^6.10.0",
+    "gatsby-plugin-sitemap": "^6.10.0",
+    "gatsby-source-filesystem": "^5.10.0",
+    "postcss": "^8.4.24",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-multi-carousel": "^2.8.4",
+    "tailwindcss": "^3.3.2",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/node": "^20.2.6",
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4",
+    "gh-pages": "^6.0.0",
+    "typescript": "^5.1.3"
+  }
+}
