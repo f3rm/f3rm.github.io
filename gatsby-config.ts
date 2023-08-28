@@ -18,6 +18,7 @@ const config: GatsbyConfig = {
             resolve: "gatsby-plugin-google-gtag",
             options: {
                 trackingIds: [
+                    // Change this to your own Google Analytics Tracking ID
                     "G-T7NKWVQH1D",
                 ],
             }
