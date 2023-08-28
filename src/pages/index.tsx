@@ -211,7 +211,8 @@ const IndexPage: React.FC<PageProps> = () => {
                     <p className="flex flex-wrap justify-center">
                         <ActionLink url={"https://arxiv.org/abs/2308.07931"} icon={<FaFilePdf/>}>Paper</ActionLink>
                         <ActionLink url={"#video"} icon={<FaVideo/>}>Video</ActionLink>
-                        <ActionLink url={"https://github.com/f3rm/f3rm"} icon={<AiFillGithub/>}>Code (coming soon)</ActionLink>
+                        <ActionLink url={"https://github.com/f3rm/f3rm"} icon={<AiFillGithub/>}>Code (coming
+                            soon)</ActionLink>
                     </p>
 
                     {/* Teaser Video */}
@@ -377,57 +378,59 @@ const IndexPage: React.FC<PageProps> = () => {
                     </FewShotResult>
 
                     <h2 id="citation" className="border-b-[1px]">Citation</h2>
-                    <pre className="bg-gradient-to-r from-pink-100 via-indigo-100 to-emerald-100">
-                        <button className="float-right text-2xl text-indigo-500 bg-white hover:bg-slate-50
-                            hover:text-indigo-600 hover:transition-all rounded-full p-2 invisible md:visible"
-                                onClick={() => {
-                                    // Select all text in the code block
-                                    let bib = document.getElementById("citation-bib");
-                                    let range = document.createRange();
-                                    let selection = window.getSelection();
-
-                                    // Check not null
-                                    if (bib == null || range == null || selection == null) {
-                                        return;
-                                    }
-                                    range.selectNode(bib);
-                                    selection.removeAllRanges();
-                                    selection.addRange(range);
-                                }}>
-                        <LuTextSelect/>
-                        </button>
-                        <code id="citation-bib" className="font-medium text-slate-800">{
-                            `@article{shen2023F3RM,
+                    <div className="relative overflow-auto">
+                        <pre className="bg-gradient-to-r from-pink-100 via-indigo-100 to-emerald-100 !my-0">
+                            <code id="citation-bib" className="font-medium text-slate-800">{
+                                `@article{shen2023F3RM,
     title={Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation},
     author={Shen, William and Yang, Ge and Yu, Alan and Wong, Jansen and Kaelbling, Leslie Pack, and Isola, Phillip},
     journal={arXiv preprint:2308.07931},
     year={2023}
 }`}
-                        </code>
-                    </pre>
+                            </code>
+                        </pre>
+                        <div className="absolute top-0 right-0">
+                            <button className="float-right text-2xl text-indigo-500 bg-white hover:bg-slate-50
+                            hover:text-indigo-600 hover:transition-all rounded-full p-2 m-3 invisible md:visible"
+                                    onClick={() => {
+                                        // Select all text in the code block
+                                        let bib = document.getElementById("citation-bib");
+                                        let range = document.createRange();
+                                        let selection = window.getSelection();
+
+                                        // Check not null
+                                        if (bib == null || range == null || selection == null) {
+                                            return;
+                                        }
+                                        range.selectNode(bib);
+                                        selection.removeAllRanges();
+                                        selection.addRange(range);
+                                    }}>
+                                <LuTextSelect/>
+                            </button>
+                        </div>
+                    </div>
                 </Article>
 
                 <footer className={"flex flex-col justify-center bg-gray-50 mt-8 py-8"}>
-                    <p className="text-center text-slate-600">
-                        {/*click to go back to top*/}
-                        <div className="flex justify-center align-middle text-lg">
-                            <a role="button" className="text-blue-500" onClick={() => {
-                                window.scrollTo({top: 0, behavior: 'smooth'});
-                            }}>
+                    {/*click to go back to top*/}
+                    <div className="flex justify-center align-middle text-lg">
+                        <a role="button" className="text-blue-500" onClick={() => {
+                            window.scrollTo({top: 0, behavior: 'smooth'});
+                        }}>
                                 <span
                                     className="align-text-top inline-flex justify-center mr-0.25"><FaArrowUp/>&nbsp;</span>
-                                <span>Back to Top</span>
-                            </a>
-                        </div>
-                        <div className="mt-2.5">
-                            Website source code on&nbsp;
-                            <a href="https://github.com/f3rm/f3rm.github.io" target="_blank" className="text-blue-500">
+                            <span>Back to Top</span>
+                        </a>
+                    </div>
+                    <div className="mt-2.5 text-center">
+                        Website source code on&nbsp;
+                        <a href="https://github.com/f3rm/f3rm.github.io" target="_blank" className="text-blue-500">
                             <span
                                 className="align-text-top inline-flex justify-center mr-0.25"><AiFillGithub/>&nbsp;</span>
-                                <span>GitHub</span>
-                            </a>
-                        </div>
-                    </p>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
                 </footer>
             </Main>
         </>
