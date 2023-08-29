@@ -383,7 +383,7 @@ const IndexPage: React.FC<PageProps> = () => {
                             <code id="citation-bib" className="font-medium text-slate-800">{
                                 `@article{shen2023F3RM,
     title={Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation},
-    author={Shen, William and Yang, Ge and Yu, Alan and Wong, Jansen and Kaelbling, Leslie Pack, and Isola, Phillip},
+    author={Shen, William and Yang, Ge and Yu, Alan and Wong, Jansen and Kaelbling, Leslie Pack and Isola, Phillip},
     journal={arXiv preprint:2308.07931},
     year={2023}
 }`}
