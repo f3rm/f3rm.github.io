@@ -211,8 +211,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <p className="flex flex-wrap justify-center">
                         <ActionLink url={"https://arxiv.org/abs/2308.07931"} icon={<FaFilePdf/>}>Paper</ActionLink>
                         <ActionLink url={"#video"} icon={<FaVideo/>}>Video</ActionLink>
-                        <ActionLink url={"https://github.com/f3rm/f3rm"} icon={<AiFillGithub/>}>Code (coming
-                            soon)</ActionLink>
+                        <ActionLink url={"https://github.com/f3rm/f3rm"} icon={<AiFillGithub/>}>Code</ActionLink>
                     </p>
 
                     {/* Teaser Video */}
