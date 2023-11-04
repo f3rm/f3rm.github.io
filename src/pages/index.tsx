@@ -38,7 +38,15 @@ import teaser_video from "./videos/teaser.mp4"
 const Title: React.FC = ({children}) => {
     // Paper title
     return (
-        <h1 className="pb-1 mb-6 sm:mb-5 sm:leading-tight md:leading-tight lg:leading-tight font-bold text-center">{children}</h1>
+        <h1 className="pb-1 mb-5 sm:mb-4 sm:leading-tight md:leading-tight lg:leading-tight font-bold text-center">{children}</h1>
+    )
+}
+
+const Venue: React.FC = ({website, children}) => {
+    return (
+        <div className="flex flex-wrap justify-center text-2xl lg:text-2xl mb-6 sm:mb-5">
+            <a className="no-underline" href={website} target="_blank">{children}</a>
+        </div>
     )
 }
 
@@ -183,6 +191,13 @@ const IndexPage: React.FC<PageProps> = () => {
                         &nbsp;
                         <span className="text-stone-800">Enable Few-Shot Language-Guided Manipulation</span>
                     </Title>
+
+                    <Venue website={"https://www.corl2023.org/"}>
+                        <span className="font-normal text-stone-600 hover:text-transparent hover:bg-clip-text
+                        hover:bg-gradient-to-r hover:from-pink-500 hover:via-indigo-600 hover:to-emerald-400
+                        hover:transition-all">CoRL 2023 (Oral)</span>
+                    </Venue>
+
                     {/* Authors */}
                     <div className="flex flex-wrap justify-center text-xl lg:text-xl mb-4">
                         <Author website={"https://shen.nz/"} firstAuthor={true} affiliations={"1"}>William Shen</Author>
@@ -380,10 +395,10 @@ const IndexPage: React.FC<PageProps> = () => {
                     <div className="relative overflow-auto">
                         <pre className="bg-gradient-to-r from-pink-100 via-indigo-100 to-emerald-100 !my-0">
                             <code id="citation-bib" className="font-medium text-slate-800">{
-                                `@article{shen2023F3RM,
+                                `@inproceedings{shen2023F3RM,
     title={Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation},
     author={Shen, William and Yang, Ge and Yu, Alan and Wong, Jansen and Kaelbling, Leslie Pack and Isola, Phillip},
-    journal={arXiv preprint:2308.07931},
+    booktitle={7th Annual Conference on Robot Learning},
     year={2023}
 }`}
                             </code>
