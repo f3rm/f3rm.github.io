@@ -195,7 +195,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <Venue website={"https://www.corl2023.org/"}>
                         <span className="font-normal text-stone-600 hover:text-transparent hover:bg-clip-text
                         hover:bg-gradient-to-r hover:from-pink-500 hover:via-indigo-600 hover:to-emerald-400
-                        hover:transition-all">CoRL 2023 (Oral)</span>
+                        hover:transition-all">CoRL 2023 (Best Paper)</span>
                     </Venue>
 
                     {/* Authors */}
